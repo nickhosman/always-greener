@@ -1,8 +1,14 @@
 function Main() {
     return (
         <div>
-            <h1 className="text-4xl text-center">Welcome to Always Greener Lawn Care</h1>
-            <p className="text-center">We are a full-service lawn care company that specializes in making your lawn look its best.</p>
+            <div className="relative">
+                <img src="" alt="" />
+                <div className="flex flex-col gap-0">
+                    <span className="text-2xl">LAWN CARE</span>
+                    <span className="text-2xl">& LANDSCAPING</span>
+                    <span className="text-lg">Make it <p className="text-green-500 font-bold">Always Greener</p></span>
+                </div>
+            </div>
             <div className="grid grid-cols-2 gap-4">
                 <div>
                     <h2 className="text-4xl w-80">Professional Lawn Care Services</h2>
