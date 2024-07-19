@@ -5,7 +5,7 @@ function Main() {
             <p className="text-center">We are a full-service lawn care company that specializes in making your lawn look its best.</p>
             <div className="grid grid-cols-2 gap-4">
                 <div>
-                    <h2>Professional Lawn Care Services</h2>
+                    <h2 className="text-4xl w-80">Professional Lawn Care Services</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo metus, tincidunt eu condimentum sit amet, lacinia id augue. Nulla vitae venenatis mauris, at dignissim neque. Duis a dui egestas purus tincidunt vehicula a eget ante. Vestibulum ut tristique erat. Cras aliquet tempus congue. Maecenas in ipsum rutrum, tempor ligula non, mattis augue. Donec dignissim urna non est rhoncus, id elementum enim mattis. Nam molestie mauris est, quis gravida elit condimentum vitae. </p>
                     <button className="bg-green-700 text-white p-4 rounded-lg font-bold cursor-pointer">GET IN TOUCH</button>
                 </div>
