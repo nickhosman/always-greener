@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 function Nav() {
     return (
         <nav className="flex w-full gap-10 items-center bg-green-700 text-white">
