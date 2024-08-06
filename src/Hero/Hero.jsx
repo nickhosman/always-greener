@@ -1,6 +1,6 @@
 function Hero() {
     return (
-        <div className="relative text-white flex h-fit">
+        <div className="text-white flex h-fit">
             <div className="flex flex-col gap-4 relative box-border p-4">
                 <h2 className="text-4xl w-80 font-bold">Professional Lawn Care Services</h2>
                 <p>Exclusively using Greenworks Battery Powered Mowers/Edgers/Trimmers and Blowers.</p>
