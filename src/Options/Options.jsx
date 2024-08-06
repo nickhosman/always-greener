@@ -17,11 +17,6 @@ function Options() {
             </div>
             <div className="flex gap-10">
                 <img className="rounded-3xl" src="https://plus.unsplash.com/premium_photo-1664123873330-06c137c40a7a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGxhd258ZW58MHx8MHx8fDA%3D" alt="Service 4" />
-                <ul className="list-disc text-white">
-                    <li>Bullet about service 1</li>
-                    <li>Bullet about service 1</li>
-                    <li>Bullet about service 1</li>
-                </ul>
             </div>
         </div>
     )
