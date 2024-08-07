@@ -39,24 +39,24 @@ export default function Carousel() {
     return (
         <div className="box-border flex flex-col items-center gap-4">
             <h2 className="font-bold text-2xl box-border pt-4">Services</h2>
-            <div className="flex overflow-x-auto gap-0">
+            <div className="flex overflow-x-auto">
                 <div className="relative flex justify-center h-72">
-                    <div className="absolute flex justify-between w-10/12 h-full bg-transparent items-center text-white box-border p-4 shrink-0">
-                        <h3 className="absolute z-10 bottom-0 box-border p-4">{images[1].name}</h3>
+                    <div className="absolute flex justify-between w-10/12 h-full bg-transparent items-center text-white box-border">
+                        <h3 className="absolute z-10 bottom-0 box-border">{images[1].name}</h3>
                     </div>
-                    <img className="object-cover w-10/12 rounded-2xl" src={images[1].url} alt="" />
+                    <img className="object-cover rounded-2xl" src={images[1].url} alt="" />
                 </div>
                 <div className="relative flex justify-center h-72">
-                    <div className="absolute flex justify-between w-10/12 h-full bg-transparent items-center text-white box-border p-4">
-                        <h3 className="absolute z-10 bottom-0 box-border p-4">{images[2].name}</h3>
+                    <div className="absolute flex justify-between w-10/12 h-full bg-transparent items-center text-white box-border">
+                        <h3 className="absolute z-10 bottom-0 box-border">{images[2].name}</h3>
                     </div>
-                    <img className="object-cover w-10/12 rounded-2xl" src={images[2].url} alt="" />
+                    <img className="object-cover rounded-2xl" src={images[2].url} alt="" />
                 </div>
                 <div className="relative flex justify-center h-72">
-                    <div className="absolute flex justify-between w-10/12 h-full bg-transparent items-center text-white box-border p-4 shrink-0">
-                        <h3 className="absolute z-10 bottom-0 box-border p-4">{images[3].name}</h3>
+                    <div className="absolute flex justify-between w-10/12 h-full bg-transparent items-center text-white box-border">
+                        <h3 className="absolute z-10 bottom-0 box-border">{images[3].name}</h3>
                     </div>
-                    <img className="object-cover w-10/12 rounded-2xl" src={images[3].url} alt="" />
+                    <img className="object-cover rounded-2xl" src={images[3].url} alt="" />
                 </div>
             </div>
         </div>
