@@ -31,16 +31,18 @@ export default function Carousel() {
     };
 
     return (
-        <div className="flex flex-col items-center">
-            <h2 className="box-border py-4">Services</h2>
+        <div className="flex flex-col items-center text-green-700">
+            <h2 className="text-4xl box-border py-4 font-bold">Options</h2>
             <div className="w-full h-9 flex justify-around items-center">
-                <div className={`w-full h-full flex justify-center border-2 border-green-700 border-b-0 rounded-t-lg items-center cursor-pointer ${currentImage === 1 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="1" onClick={handleClick}>1</div>
-                <div className={`w-full h-full flex justify-center items-center border-2 border-green-700 border-b-0 rounded-t-lg cursor-pointer ${currentImage === 2 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="2" onClick={handleClick}>2</div>
-                <div className={`w-full h-full items-center flex justify-center border-2 border-green-700 border-b-0 rounded-t-lg cursor-pointer ${currentImage === 3 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="3" onClick={handleClick}>3</div>
+                <div className={`w-full h-full flex justify-center border-4 border-green-700 border-b-0 rounded-t-lg items-center cursor-pointer ${currentImage === 1 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="1" onClick={handleClick}>1</div>
+                <div className={`w-full h-full flex justify-center items-center border-4 border-green-700 border-b-0 rounded-t-lg cursor-pointer ${currentImage === 2 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="2" onClick={handleClick}>2</div>
+                <div className={`w-full h-full items-center flex justify-center border-4 border-green-700 border-b-0 rounded-t-lg cursor-pointer ${currentImage === 3 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="3" onClick={handleClick}>3</div>
             </div>
-            <div className="relative box-border border-2 border-green-700 border-t-0 p-4 w-full">
-                <img className="rounded-3xl h-72 w-full" src={images[currentImage].url} alt={images[currentImage].name} />
-                <h3 className="absolute w-72 bottom-10 left-6 text-white">{images[currentImage].name}</h3>
+            <div className="box-border border-4 border-green-700 border-t-0 p-4 w-full">
+                <div className="relative min-w-1/3 text-lg flex flex-col items-center">
+                    <img className="rounded-3xl h-72 w-full object-cover brightness-75" src={images[currentImage].url} alt="" />
+                    <h3 className="absolute min-w-72 bottom-10 box-border p-4 text-white">{images[currentImage].name}</h3>
+                </div>
             </div>
         </div>
     )
