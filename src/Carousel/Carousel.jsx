@@ -37,16 +37,27 @@ export default function Carousel() {
     }
 
     return (
-        <div className="box-border p-4 flex flex-col items-center gap-4">
+        <div className="box-border flex flex-col items-center gap-4">
             <h2 className="font-bold text-2xl box-border pt-4">Services</h2>
-            <div className="relative flex justify-center h-72 box-border ">
-                {currentImage === 3 ? <div className="rounded-full absolute right-4 -top-3 bg-yellow-600 h-20 w-20 flex items-center justify-center"> <span className="text-white -rotate-45 font-bold">Featured!</span></div> : null}
-                <div className="absolute flex justify-between w-10/12 h-full bg-transparent items-center text-white box-border p-4">
-                    <div className="cursor-pointer relative z-10 " onClick={handleLeft}><FaArrowCircleLeft size={32}/></div>
-                    <h3 className="absolute z-10 bottom-0 box-border p-4">{images[currentImage].name}</h3>
-                    <div className="cursor-pointer relative right-0 z-10" onClick={handleRight}><FaArrowCircleRight size={32}/></div>
+            <div className="flex overflow-x-auto gap-0">
+                <div className="relative flex justify-center h-72">
+                    <div className="absolute flex justify-between w-10/12 h-full bg-transparent items-center text-white box-border p-4 shrink-0">
+                        <h3 className="absolute z-10 bottom-0 box-border p-4">{images[1].name}</h3>
+                    </div>
+                    <img className="object-cover w-10/12 rounded-2xl" src={images[1].url} alt="" />
                 </div>
-                <img className="object-cover w-10/12 rounded-2xl" src={images[currentImage].url} alt="" />
+                <div className="relative flex justify-center h-72">
+                    <div className="absolute flex justify-between w-10/12 h-full bg-transparent items-center text-white box-border p-4">
+                        <h3 className="absolute z-10 bottom-0 box-border p-4">{images[2].name}</h3>
+                    </div>
+                    <img className="object-cover w-10/12 rounded-2xl" src={images[2].url} alt="" />
+                </div>
+                <div className="relative flex justify-center h-72">
+                    <div className="absolute flex justify-between w-10/12 h-full bg-transparent items-center text-white box-border p-4 shrink-0">
+                        <h3 className="absolute z-10 bottom-0 box-border p-4">{images[3].name}</h3>
+                    </div>
+                    <img className="object-cover w-10/12 rounded-2xl" src={images[3].url} alt="" />
+                </div>
             </div>
         </div>
     )
