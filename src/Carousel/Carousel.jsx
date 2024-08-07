@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
 
@@ -20,44 +20,27 @@ export default function Carousel() {
 
     const [currentImage, setCurrentImage] = useState(1);
 
-    const handleRight = () => {
-        if (currentImage === 3) {
+    const handleClick = (e) => {
+        if (e.target.id === "1") {
             setCurrentImage(1);
+        } else if (e.target.id === "2") {
+            setCurrentImage(2);
         } else {
-            setCurrentImage(currentImage + 1);
-        }
-    }
-
-    const handleLeft = () => {
-        if (currentImage === 1) {
             setCurrentImage(3);
-        } else {
-            setCurrentImage(currentImage - 1);
         }
-    }
+    };
 
     return (
-        <div className="box-border flex flex-col items-center gap-4">
-            <h2 className="font-bold text-2xl box-border pt-4">Services</h2>
-            <div className="flex overflow-x-auto">
-                <div className="relative flex justify-center h-72">
-                    <div className="absolute flex justify-between w-10/12 h-full bg-transparent items-center text-white box-border">
-                        <h3 className="absolute z-10 bottom-0 box-border">{images[1].name}</h3>
-                    </div>
-                    <img className="object-cover rounded-2xl" src={images[1].url} alt="" />
-                </div>
-                <div className="relative flex justify-center h-72">
-                    <div className="absolute flex justify-between w-10/12 h-full bg-transparent items-center text-white box-border">
-                        <h3 className="absolute z-10 bottom-0 box-border">{images[2].name}</h3>
-                    </div>
-                    <img className="object-cover rounded-2xl" src={images[2].url} alt="" />
-                </div>
-                <div className="relative flex justify-center h-72">
-                    <div className="absolute flex justify-between w-10/12 h-full bg-transparent items-center text-white box-border">
-                        <h3 className="absolute z-10 bottom-0 box-border">{images[3].name}</h3>
-                    </div>
-                    <img className="object-cover rounded-2xl" src={images[3].url} alt="" />
-                </div>
+        <div className="flex flex-col items-center">
+            <h2 className="box-border py-4">Services</h2>
+            <div className="w-full h-9 flex justify-around items-center">
+                <div className={`w-full h-full flex justify-center border-2 border-green-700 border-b-0 rounded-t-lg items-center cursor-pointer ${currentImage === 1 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="1" onClick={handleClick}>1</div>
+                <div className={`w-full h-full flex justify-center items-center border-2 border-green-700 border-b-0 rounded-t-lg cursor-pointer ${currentImage === 2 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="2" onClick={handleClick}>2</div>
+                <div className={`w-full h-full items-center flex justify-center border-2 border-green-700 border-b-0 rounded-t-lg cursor-pointer ${currentImage === 3 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="3" onClick={handleClick}>3</div>
+            </div>
+            <div className="relative box-border border-2 border-green-700 border-t-0 p-4 w-full">
+                <img className="rounded-3xl h-72 w-full" src={images[currentImage].url} alt={images[currentImage].name} />
+                <h3 className="absolute w-72 bottom-10 left-6 text-white">{images[currentImage].name}</h3>
             </div>
         </div>
     )
