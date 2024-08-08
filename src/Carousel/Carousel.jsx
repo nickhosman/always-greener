@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import { FaArrowCircleLeft } from "react-icons/fa";
-import { FaArrowCircleRight } from "react-icons/fa";
+import { useState } from "react";
+import Option from "./Option";
 
 export default function Carousel() {
     const images = {
@@ -16,7 +15,7 @@ export default function Carousel() {
             url: 'https://plus.unsplash.com/premium_photo-1664123873330-06c137c40a7a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGxhd258ZW58MHx8MHx8fDA%3D',
             name: "Brown Patch Revival - Just like the best Golf Courses use!",
         },
-    }
+    };
 
     const [currentImage, setCurrentImage] = useState(1);
 
@@ -31,18 +30,25 @@ export default function Carousel() {
     };
 
     return (
-        <div className="flex flex-col items-center text-green-700">
-            <h2 className="text-4xl box-border py-4 font-bold">Options</h2>
-            <div className="w-full h-9 flex justify-around items-center">
-                <div className={`w-full h-full flex justify-center border-4 border-green-700 border-b-0 rounded-t-lg items-center cursor-pointer ${currentImage === 1 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="1" onClick={handleClick}>1</div>
-                <div className={`w-full h-full flex justify-center items-center border-4 border-green-700 border-b-0 rounded-t-lg cursor-pointer ${currentImage === 2 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="2" onClick={handleClick}>2</div>
-                <div className={`w-full h-full items-center flex justify-center border-4 border-green-700 border-b-0 rounded-t-lg cursor-pointer ${currentImage === 3 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="3" onClick={handleClick}>3</div>
-            </div>
-            <div className="box-border border-4 border-green-700 border-t-0 p-4 w-full">
-                <div className="relative min-w-1/3 text-lg flex flex-col items-center">
-                    <img className="rounded-3xl h-72 w-full object-cover brightness-75" src={images[currentImage].url} alt="" />
-                    <h3 className="absolute min-w-72 bottom-10 box-border p-4 text-white">{images[currentImage].name}</h3>
+        <div className="font-open-sans flex flex-col items-center w-full">
+            <h2 className="text-4xl box-border py-4 font-bold text-green-700">Our Services</h2>
+            <div className="flex flex-col items-center text-green-700 md:hidden w-full">
+                <div className="w-full h-9 flex justify-around items-center">
+                    <div className={`w-full h-full flex justify-center border-4 border-green-700 border-b-0 rounded-t-lg items-center cursor-pointer ${currentImage === 1 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="1" onClick={handleClick}>1</div>
+                    <div className={`w-full h-full flex justify-center items-center border-4 border-green-700 border-b-0 rounded-t-lg cursor-pointer ${currentImage === 2 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="2" onClick={handleClick}>2</div>
+                    <div className={`w-full h-full items-center flex justify-center border-4 border-green-700 border-b-0 rounded-t-lg cursor-pointer ${currentImage === 3 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="3" onClick={handleClick}>3</div>
                 </div>
+                <div className="box-border border-4 border-green-700 border-t-0 p-4 w-full">
+                    <div className="relative min-w-1/3 text-lg flex flex-col items-center justify-center">
+                        <img className="rounded-3xl h-72 w-full object-cover brightness-75" src={images[currentImage].url} alt="" />
+                        <h3 className="absolute min-w-60 bottom-10 box-border p-4 text-white">{images[currentImage].name}</h3>
+                    </div>
+                </div>
+            </div>
+            <div className="hidden box-border p-6 w-full md:flex md:gap-6 md:justify-around lg:p-10 lg:justify-center">
+                {Object.values(images).map((image, index) => (
+                    <Option key={index} image={image.url} name={image.name}/>
+                ))}
             </div>
         </div>
     )
