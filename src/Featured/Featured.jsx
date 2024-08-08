@@ -5,19 +5,19 @@ import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 export default function Featured () {
     const imageSet = {
         1: {
-            img1: "/1 green spot.jpeg",
-            img2: "/1 brown spot.jpeg"
+            img1: "https://i.ibb.co/Gtr68R1/1-green-spot.jpg",
+            img2: "https://i.ibb.co/Lv0Kp3Q/1-brown-spot.jpg"
         },
         2: {
-            img1: "/7 green spots.jpeg",
-            img2: "/7 brown spots.jpeg"
+            img1: "https://i.ibb.co/HKFFQnB/7-green-spots.jpg",
+            img2: "https://i.ibb.co/19fTNdx/7-brown-spots.jpg"
         },
         3: {
-            img1: "/Green Patch.jpeg",
-            img2: "/brown patch.jpeg"
+            img1: "https://i.ibb.co/yh9JWbq/Green-Patch.jpg",
+            img2: "https://i.ibb.co/StdNF4B/brown-patch.jpg"
         },
     };
-
+    
     const [ count, setCount ] = useState(1);
 
     const handleLeft = () => {
