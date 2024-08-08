@@ -4,11 +4,9 @@ export default function Featured () {
             <h2 className="text-white text-4xl font-bold p-4">Brown Spot Renewal</h2>
             <div className="flex flex-col gap-4 p-4">
                 <div>
-                    <img className="rounded-3xl h-72 w-full" src="https://plus.unsplash.com/premium_photo-1664123873330-06c137c40a7a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGxhd258ZW58MHx8MHx8fDA%3D" alt="Brown Patch Revival - Just like the best Golf Courses use!" />
-                    <h3 className="text-white">Brown Patch Revival - Just like the best Golf Courses use!</h3>
+                    
                 </div>
-                <p className="text-white">We use the same technology that the best golf courses use to keep their greens looking perfect.  We can make your lawn look like a golf course!</p>
-                <button className="bg-white text-green-700 p-4 rounded-lg font-bold cursor-pointer w-40 self-center">GET IN TOUCH</button>
+                <p className="text-white">We use the same technology that the best golf courses use to keep their greens looking perfect.</p>
             </div>
         </div>
     )

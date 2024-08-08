@@ -36,7 +36,7 @@ export default function Carousel() {
                 <div className="w-full h-9 flex justify-around items-center">
                     <div className={`w-full h-full flex justify-center border-4 border-green-700 border-b-0 rounded-t-lg items-center cursor-pointer ${currentImage === 1 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="1" onClick={handleClick}>1</div>
                     <div className={`w-full h-full flex justify-center items-center border-4 border-green-700 border-b-0 rounded-t-lg cursor-pointer ${currentImage === 2 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="2" onClick={handleClick}>2</div>
-                    <div className={`w-full h-full items-center flex justify-center border-4 border-green-700 border-b-0 rounded-t-lg cursor-pointer ${currentImage === 3 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="3" onClick={handleClick}>3</div>
+                    <div className={`relative w-full h-full items-center flex justify-center border-4 border-green-700 border-b-0 rounded-t-lg cursor-pointer ${currentImage === 3 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="3" onClick={handleClick}>3</div>
                 </div>
                 <div className="box-border border-4 border-green-700 border-t-0 p-4 w-full">
                     <div className="relative min-w-1/3 text-lg flex flex-col items-center justify-center">
