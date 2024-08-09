@@ -5,7 +5,7 @@ function Hero() {
 
     return (
         <div className="relative grid sm:grid-cols-2 xl:grid-cols-[1fr_1fr_0.5fr] text-white md:h-[32rem] w-full justify-center">
-            <div className="flex items-center justify-center xl:justify-end md:h-[32rem]">
+            <div className="flex items-center justify-center xl:justify-end md:h-[32rem] relative">
                 <img className="h-4/5 object-contain box-border max-height-96" src="https://i.ibb.co/NSRcgs7/Always-Greener-No-Text-v7-small.png" alt="" />
             </div>
             <div className="flex flex-col md:flex-row md:items-center md:w-full md:py-20 gap-4 relative box-border p-4">
