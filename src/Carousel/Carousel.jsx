@@ -54,7 +54,7 @@ export default function Carousel() {
                     <Option key={index} image={image.url} name={image.name}/>
                 ))}
             </div>
-            <img className="h-2/3 absolute -bottom-1/3 md:-bottom-1/4 -right-20 rotate-12" src="https://i.ibb.co/g7PpX58/Bob.png" alt="" />
+            <img className="h-2/3 absolute -bottom-1/3 md:-bottom-1/4 -right-20 rotate-12" src="https://i.ibb.co/hfk68xB/Bob-Neon.png" alt="" />
             <div className="absolute rounded-full bg-white border-black border-4 bottom-2 right-40 text-black text-2xl flex flex-col items-center justify-center box-border p-8 font-comic-neue font-semibold text-center">
                     <p className="md:hidden">{images[currentImage].text}</p>
                     <div className="hidden md:flex md:flex-col">
