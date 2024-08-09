@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Compare from "./Compare"
-import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
 
 export default function Featured () {
     const imageSet = {
@@ -18,23 +20,7 @@ export default function Featured () {
         },
     };
 
-    const [ count, setCount ] = useState(1);
-
-    const handleLeft = () => {
-        if (count > 1) {
-            setCount(count - 1);
-        } else {
-            setCount(3);
-        }
-    };
-
-    const handleRight = () => {
-        if (count < 3) {
-            setCount(count + 1);
-        } else {
-            setCount(1);
-        }
-    };
+    const [opacity, setOpacity] = useState(0);
 
     return (
         <div className="box-border p-4 bg-green-700 text-white">
@@ -50,11 +36,19 @@ export default function Featured () {
                 </div>
                 <div className="flex flex-col gap-4 border-box h-full w-full">
                     <p className="text-center lg:text-lg">Ready to walk on in less than an hour! A fast low-cost solution to a more beautiful lawn!</p>
-                    <div className="flex relative flex-grow-0">
-                        <FaArrowCircleLeft className="absolute text-4xl lg:text-6xl cursor-pointer left-4 top-1/3 z-20" onClick={handleLeft} />
-                        <Compare img1={imageSet[count].img1} img2={imageSet[count].img2} />
-                        <FaArrowCircleRight className="absolute text-4xl lg:text-6xl cursor-pointer right-4 top-1/3 z-20" onClick={handleRight} />
-                    </div>
+                    <Carousel infiniteLoop={true}>
+                        {Object.values(imageSet).map((image, index) => (
+                            <Compare img1={image.img1} img2={image.img2} opacity={opacity} key={index} />
+                        ))}
+                    </Carousel>
+                    <input
+                        type="range"
+                        min={0}
+                        max={100}
+                        value={opacity}
+                        onChange={(e) => setOpacity(e.target.value)}
+                    />
+                    <h2 className="font-bold text-xl text-center">Move the slider to see the transformation!</h2>
                 </div>
             </div>
         </div>
