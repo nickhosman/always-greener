@@ -4,13 +4,13 @@ function Hero() {
     };
 
     return (
-        <div className="relative text-white h-fit flex w-full justify-center">
-            <div className="hidden md:flex items-center md:justify-end">
-                <img className="h-4/5 w-full object-contain box-border" src="https://i.ibb.co/NSRcgs7/Always-Greener-No-Text-v7-small.png" alt="" />
+        <div className="relative grid sm:grid-cols-2 xl:grid-cols-[1fr_1fr_0.5fr] text-white md:h-[32rem] w-full justify-center">
+            <div className="flex items-center justify-center xl:justify-end md:h-[32rem]">
+                <img className="h-4/5 object-contain box-border max-height-96" src="https://i.ibb.co/NSRcgs7/Always-Greener-No-Text-v7-small.png" alt="" />
             </div>
-            <div className="flex flex-col md:flex-row md:justify-start md:items-center md:w-full md:py-20 gap-4 relative box-border">
+            <div className="flex flex-col md:flex-row md:items-center md:w-full md:py-20 gap-4 relative box-border p-4">
                 <div className="flex flex-col gap-4 items-start p-4">
-                    <h2 className="text-4xl w-full sm:w-96 font-bold">Professional Lawn Care Services</h2>
+                    <h2 className="text-3xl md:text-4xl w-full font-bold">Professional Lawn Care Services</h2>
                     <div className="flex flex-col gap-1 ">
                         <p>Exclusively using Greenworks Battery Powered Mowers/Edgers/Trimmers and Blowers.</p>
                         <p>The quiet and <span className="text-lime-200">clean</span> way to make your yard beautiful!</p>
