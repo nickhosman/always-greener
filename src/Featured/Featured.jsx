@@ -38,15 +38,18 @@ export default function Featured () {
 
     return (
         <div className="box-border p-4 bg-green-700 text-white">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col items-center gap-2">
                 <h2 className="text-4xl font-bold text-center">Brown Spot Renewal</h2>
-                <p className="text-center lg:text-lg">We use the same products that the best golf courses use to keep their greens looking perfect!</p>
+                <p className="text-center lg:text-lg">Dealing with brown spots in your lawn? No need to worry!</p>
+                <p className="text-center lg:text-lg">One application of Endurant Premium Grass Paint will make your lawn look perfect again!</p>
             </div>
             <div className="grid sm:grid-cols-2 justify-between items-center box-border p-4 gap-8 md:flex-row px-10">
                 <div className="flex flex-col gap-4 items-center h-full w-full">
                     <img className="rounded-md drop-shadow-md h-full object-cover" src="https://m.media-amazon.com/images/I/61MQy1pH1OL._AC_.jpg" alt="endurant premium grass paint" />
+                    <p className="text-center lg:text-lg">Used by the best PGA Golf courses to keep their greens in tournament perfect condition.</p>
                 </div>
                 <div className="flex flex-col gap-4 border-box h-full w-full">
+                    <p className="text-center lg:text-lg">Ready to walk on in less than an hour! A fast low-cost solution to a more beautiful lawn!</p>
                     <div className="flex relative flex-grow-0">
                         <FaArrowCircleLeft className="absolute text-4xl lg:text-6xl cursor-pointer left-4 top-1/3 z-20" onClick={handleLeft} />
                         <Compare img1={imageSet[count].img1} img2={imageSet[count].img2} />
