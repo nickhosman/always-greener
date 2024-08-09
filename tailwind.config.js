@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         "oswald": ["Oswald", "sans-serif"],
         "open-sans": ["Open Sans", "sans-serif"],
+        "comic-neue": ["Comic Neue", "cursive"],
       }
     },
   },

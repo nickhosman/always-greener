@@ -7,6 +7,12 @@ function Hero() {
         <div className="relative grid sm:grid-cols-2 xl:grid-cols-[1fr_1fr_0.5fr] text-white md:h-[32rem] w-full justify-center">
             <div className="flex items-center justify-center xl:justify-end md:h-[32rem] relative">
                 <img className="h-4/5 object-contain box-border max-height-96" src="https://i.ibb.co/NSRcgs7/Always-Greener-No-Text-v7-small.png" alt="" />
+                {/* <div className="absolute rounded-full bg-slate-900 border-black border-4 bottom-4 bg-opacity-50 text-white text-2xl flex flex-col items-center justify-center box-border p-8 font-comic-neue font-semibold text-center">
+                    <p>I'll mow your lawn,</p>
+                    <p>I'll trim your bushes,</p>
+                    <span>AND</span>
+                    <p>I'll get rid of those nasty brown spots!</p>
+                </div> */}
             </div>
             <div className="flex flex-col md:flex-row md:items-center md:w-full md:py-20 gap-4 relative box-border p-4">
                 <div className="flex flex-col gap-4 items-start p-4">
