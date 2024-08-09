@@ -17,7 +17,7 @@ export default function Featured () {
             img2: "https://i.ibb.co/StdNF4B/brown-patch.jpg"
         },
     };
-    
+
     const [ count, setCount ] = useState(1);
 
     const handleLeft = () => {
@@ -48,9 +48,9 @@ export default function Featured () {
                 </div>
                 <div className="flex flex-col gap-4 border-box h-full w-full">
                     <div className="flex relative flex-grow-0">
-                        <FaArrowCircleLeft className="absolute text-4xl lg:text-6xl cursor-pointer left-4 inset-1/2 z-20" onClick={handleLeft} />
+                        <FaArrowCircleLeft className="absolute text-4xl lg:text-6xl cursor-pointer left-4 top-1/3 z-20" onClick={handleLeft} />
                         <Compare img1={imageSet[count].img1} img2={imageSet[count].img2} />
-                        <FaArrowCircleRight className="absolute text-4xl lg:text-6xl cursor-pointer right-4 top-1/2 z-20" onClick={handleRight} />
+                        <FaArrowCircleRight className="absolute text-4xl lg:text-6xl cursor-pointer right-4 top-1/3 z-20" onClick={handleRight} />
                     </div>
                 </div>
             </div>

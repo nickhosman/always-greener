@@ -15,6 +15,7 @@ export default function Compare ({ img1, img2 }) {
                 max={100}
                 value={opacity}
                 onChange={(e) => setOpacity(e.target.value)} />
+            <h2 className="font-bold text-xl text-center">Move the slider to see the transformation!</h2>
         </div>
     );
 };
