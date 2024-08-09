@@ -43,9 +43,9 @@ export default function Carousel() {
                     <div className={`relative w-full h-full items-center flex justify-center border-4 border-green-700 border-b-0 rounded-t-lg cursor-pointer ${currentImage === 3 ? "bg-white text-green-700" : "bg-green-700 text-white"}`} id="3" onClick={handleClick}>3</div>
                 </div>
                 <div className="box-border border-4 border-green-700 border-t-0 p-4 w-full pb-32">
-                    <div className="relative min-w-1/3 text-lg flex flex-col items-center justify-center px-10">
+                    <div className="relative text-lg flex flex-col items-center justify-center px-10">
                         <img className="rounded-3xl h-72 w-full object-cover brightness-75" src={images[currentImage].url} alt="" />
-                        <h3 className="absolute min-w-60 bottom-10 box-border p-10 text-white">{images[currentImage].name}</h3>
+                        <h3 className="absolute min-w-60 bottom-10 left-6 box-border p-10 text-white">{images[currentImage].name}</h3>
                     </div>
                 </div>
             </div>
