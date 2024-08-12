@@ -10,16 +10,19 @@ export default function Contact() {
                     <MdOutlineMailOutline size={42}/>
                     <div>
                         <span className="font-bold">Email</span>
-                        <p>mail@email.com</p>
+                        <p>bobgwrx@gmail.com</p>
                     </div>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex items-center gap-2">
                     <FaPhone size={42}/>
                     <div>
                         <span className="font-bold">Phone</span>
-                        <p>555-555-5555</p>
+                        <p>408.892.3400</p>
                     </div>
                 </div>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+                <p>Business Lic. 55096</p>
             </div>
         </div>
     )
