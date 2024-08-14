@@ -2,7 +2,7 @@
   "name": "always-greener",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://nickhosman.github.io/always-greener",
+  "homepage": "https://www.alwaysgreener.net",
   "type": "module",
   "scripts": {
     "dev": "vite",
